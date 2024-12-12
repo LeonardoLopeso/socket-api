@@ -37,6 +37,12 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get('/', (req: Request, res: Response) => {
+  res.status(200).json({
+    message: 'API is running'
+  })
+})
+
 // Endpoint para cadastrar um usuário
 app.post('/register', (req: Request, res: Response) => {
   const newUser = req.body
